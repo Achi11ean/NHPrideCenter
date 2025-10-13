@@ -4,101 +4,110 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-blue-900 text-gray-900">
+    <div className="min-h-screen pb-10 bg-gradient-to-br from-teal-800 via-indigo-900 to-purple-900 text-gray-100">
       {/* Banner */}
-      <section className="relative w-full bg-black">
+      <section className="relative w-full">
         <div
-          className="h-[42vh] min-h-64 md:h-[56vh] bg-cover bg-center"
+          className="h-[42vh] md:h-[56vh] bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop')",
-            backgroundPosition: "center 60%",
+              "url('https://westhartfordpride.org/wp-content/uploads/2022/01/West-Hartford-Pride-2022.jpg')",
+            backgroundPosition: "center 55%",
           }}
-          aria-label="Company banner"
+          aria-label="Community celebration banner"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
 
-        {/* Original Overlapping Title Pill */}
-        <div className="absolute bottom-[-40px] sm:bottom-[-100px] left-1/2 -translate-x-1/2 border-2 border-blue-400 bg-gradient-to-r from-white/80 to-white/40 backdrop-blur-lg px-6 sm:px-10 py-3 sm:py-5 rounded shadow-xl w-11/12 sm:w-auto">
-          <h1 className="text-2xl sm:text-4xl text-center md:text-6xl font-serif italic drop-shadow-lg tracking-wider leading-tight text-black">
+        {/* Overlapping Title */}
+        <div className="absolute bottom-[-40px] sm:bottom-[-100px] left-1/2 -translate-x-1/2 border-2 border-pink-400 bg-gradient-to-r from-white/80 to-white/40 backdrop-blur-lg px-6 sm:px-10 py-3 sm:py-5 rounded shadow-xl w-11/12 sm:w-auto">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl text-center font-serif italic font-bold text-black drop-shadow-md">
             About Us
-            <hr className="border-blue-400 border-2 w-full mt-2" />
-            <span className="text-base sm:text-xl md:text-2xl tracking-widest block sm:inline text-black">
-              Learn our story & values
+            <hr className="border-pink-400 border-2 w-full mt-2" />
+            <span className="text-base sm:text-xl md:text-2xl  block sm:inline text-gray-800">
+              Empower • Educate • Celebrate
             </span>
           </h1>
         </div>
       </section>
 
       {/* Main Content */}
-      <main className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32">
-        {/* Quick Links row */}
+      <main className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-32">
+        {/* Quick Links */}
         <nav aria-label="Primary">
-          <div className="grid grid-cols-3 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500 hover:from-indigo-500 hover:via-blue-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
+              className="block text-center px-6 py-3 font-semibold text-white border border-white shadow-lg bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 hover:from-purple-600 hover:via-fuchsia-500 hover:to-pink-500 transition-all duration-300 focus-visible:ring-4 focus-visible:ring-pink-300"
             >
               Contact
             </Link>
             <Link
-              to="/services"
-              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 hover:from-pink-500 hover:via-purple-600 hover:to-indigo-500 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-fuchsia-300"
+              to="/events"
+              className="block text-center px-6 py-3 font-semibold text-white border border-white shadow-lg bg-gradient-to-r from-teal-500 via-green-500 to-lime-500 hover:from-lime-500 hover:via-green-500 hover:to-teal-500 transition-all duration-300 focus-visible:ring-4 focus-visible:ring-teal-300"
             >
-              Services
+              Events
             </Link>
             <Link
-              to="/ourteam"
-              className="block w-full text-center px-6 py-3 font-semibold text-white rounded-xl shadow-lg bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 hover:from-cyan-500 hover:via-sky-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
+              to="/volunteer"
+              className="block text-center px-6 py-3 font-semibold text-white shadow-lg border border-white bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 hover:from-blue-500 hover:via-purple-500 hover:to-indigo-500 transition-all duration-300 focus-visible:ring-4 focus-visible:ring-indigo-300"
             >
-              Team
+              Volunteer
             </Link>
+            
           </div>
         </nav>
-
+<div className="text-center py-3 ">
+          <Link
+            to="/contact"
+            className="inline-block w-full py-1 text-lg font-semibold text-white  border border-white  shadow-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105 transition-transform"
+          >
+            Donate 🌈
+          </Link>
+        </div>
         {/* Headline */}
         <motion.p
-          className="mt-12 text-center text-xl  sm:text-2xl border-l-2 border-r-2 border-t-2 md:text-3xl font-extrabold text-white"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-2 text-center text-xl sm:text-2xl md:text-3xl font-extrabold border-y-2 border-pink-400 py-3"
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          We craft simple, scalable experiences that help people do their best work.
+          Building a future where every voice is heard, every identity celebrated, and every person empowered.
         </motion.p>
-<hr className="border-white border-2 w-full mt-4" />
 
         {/* Intro */}
         <motion.p
-          className="mt-4 text-base sm:text-lg border-b-2 border-r-2 border-l-2 md:text-xl text-center text-white max-w-6xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-2 text-center text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 0.15 }}
         >
-          Our team focuses on clarity, performance, and thoughtful design. From idea to launch,
-          we keep things intuitive and reliable—so you can move faster with confidence.
+          The <span className="text-pink-300 font-semibold">New Haven Pride Center</span> is dedicated to uplifting
+          and connecting the LGBTQIA+ community through advocacy, art, education, and celebration.  
+          We provide inclusive programming, support services, and cultural events that amplify queer voices and promote equality.
         </motion.p>
 
         {/* Info Grid */}
-        <section className="mt-10 md:mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <article className=" bg-white p-6 md:p-8 shadow-xl border border-gray-100">
-              <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-center border-b-2 border-blue-800 text-blue-800">Our Mission</h2>
-              <p className="text-base md:text-lg leading-7 md:leading-8 text-gray-700">
-                Build delightful, dependable products that empower creators and teams—
-                keeping the experience fast, accessible, and easy to maintain.
-              </p>
-            </article>
-            <article className=" bg-white p-6 md:p-8 shadow-xl border border-gray-100">
-              <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-center border-b-2 border-blue-800 text-blue-800">Our Values</h2>
-              <p className="text-base md:text-lg leading-7 md:leading-8 text-gray-700">
-                Simplicity, trust, and quality. We ship thoughtfully, listen closely,
-                and iterate with care to deliver results that last.
-              </p>
-            </article>
-          </div>
+        <section className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          <article className="bg-white/90 text-gray-800 p-6 md:p-8 shadow-xl rounded-xl border-l-4 border-pink-500">
+            <h2 className="text-3xl font-bold mb-3 text-center text-pink-600">Our Mission</h2>
+            <p className="text-base md:text-lg leading-7">
+              To create a welcoming and affirming space for all members of the LGBTQIA+ community by fostering connection, promoting self-expression,
+              and providing essential resources that empower individuals and strengthen our collective voice in Greater New Haven.
+            </p>
+          </article>
+
+          <article className="bg-white/90 text-gray-800 p-6 md:p-8 shadow-xl rounded-xl border-l-4 border-teal-500">
+            <h2 className="text-3xl font-bold mb-3 text-center text-teal-600">Our Values</h2>
+            <p className="text-base md:text-lg leading-7">
+              We believe in authenticity, inclusivity, and collaboration.  
+              Through creativity and compassion, we build bridges across communities and celebrate the beauty of being unapologetically ourselves.  
+              Together, we thrive.
+            </p>
+          </article>
         </section>
 
-        <div className="h-16" />
+        {/* Closing CTA */}
+        
       </main>
     </div>
   );

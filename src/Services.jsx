@@ -1,4 +1,3 @@
-// Services.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,80 +5,80 @@ export default function Services({
   contactPath = "/contact",
   services = [],
   theme = {
-    pageBg: "bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900",
-    cardBg: "bg-white",
-    cardHoverBg: "hover:bg-gray-50",
-    primaryTextGrad: "bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-500",
-    accentTextGrad: "bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400  ",
-    border: "border-white/10",
+    pageBg: "bg-gradient-to-b from-indigo-900 via-purple-900 to-teal-900",
+    cardBg: "bg-white/90",
+    cardHoverBg: "hover:bg-white",
+    primaryTextGrad: "bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500",
+    accentTextGrad: "bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400",
+    border: "border-white/20",
     headingText: "text-white",
-    bodyText: "text-gray-700",
+    bodyText: "text-gray-800",
   },
 }) {
   const [selectedService, setSelectedService] = useState(null);
 
-  // fallback default services if none are passed
-const defaultServices = services.length
-  ? services
-  : [
-      {
-        title: "Web Development",
-        desc: "Custom websites and web apps tailored to your business.",
-        details:
-          "We create responsive, high-performing web solutions using modern technologies that align with your goals.",
-        image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
-      },
-      {
-        title: "Mobile Apps",
-        desc: "iOS & Android apps designed for seamless user experiences.",
-        details:
-          "From wireframes to app store deployment, we bring your mobile vision to life with sleek and functional design.",
-        image:
-          "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop",
-      },
-      {
-        title: "Branding & Design",
-        desc: "Creative design solutions to elevate your brand identity.",
-        details:
-          "Logos, color palettes, and full brand kits to make your business unforgettable.",
-        image:
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop",
-      },
-      {
-        title: "Consulting",
-        desc: "Expert guidance to help streamline your business operations.",
-        details:
-          "We provide tailored advice, audits, and strategies for growth and efficiency.",
-        image:
-          "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1400&auto=format&fit=crop",
-      },
-      {
-        title: "Budget Saving",
-        desc: "Smart solutions designed to maximize value while reducing costs.",
-        details:
-          "Our budget saving strategies analyze your spending, identify inefficiencies, and deliver cost-effective alternatives that protect quality while improving profitability.",
-        image:
-          "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=1400&auto=format&fit=crop",
-      },
-      {
-        title: "Customer Service",
-        desc: "Reliable, friendly support that strengthens client relationships.",
-        details:
-          "We help businesses implement customer service systems that improve satisfaction, increase retention, and build brand loyalty—whether through training, live support, or digital solutions.",
-        image:
-          "https://media.istockphoto.com/id/1397818637/photo/low-angle-shot-of-an-attractive-young-call-centre-agent-sitting-alone-in-the-office-and-using.jpg?s=612x612&w=0&k=20&c=UwAyTFFIDnNrYOtOhu5rvyL84hbpTJ-F9Htplww-V-o=",
-      },
-    ];
+  // 🌟 Default Pride Center Services
+  const defaultServices = services.length
+    ? services
+    : [
+        {
+          title: "Community Programs",
+          desc: "Engaging activities that bring the LGBTQIA+ community together.",
+          details:
+            "From youth and senior meetups to art showcases, open mics, and drag story hours — our programs celebrate diversity, inclusion, and joy in every form.",
+          image:
+            "https://www.cdph.ca.gov/Programs/CID/DOA/PublishingImages/Pages/Celebrate-Pride/CelebratePrideCropped.jpg",
+        },
+        {
+          title: "Advocacy & Education",
+          desc: "Empowering voices and creating awareness across Connecticut.",
+          details:
+            "We provide training, workshops, and educational initiatives to promote equality, inclusivity, and understanding in schools, workplaces, and local communities.",
+          image:
+            "https://media.licdn.com/dms/image/v2/C5612AQH9PUIENeYaKQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1588869753497?e=2147483647&v=beta&t=xB10s2-5w_JhfwG47_hiQ2d1RBWTzYdHwQQoE5lO758",
+        },
+        {
+          title: "Health & Wellness",
+          desc: "Supporting mind, body, and spirit with care and compassion.",
+          details:
+            "Our health programs offer resources on mental wellness, sexual health, HIV testing, and access to affirming care providers — because your wellbeing matters.",
+          image:
+            "https://www.inspirahealthnetwork.org/sites/default/files/2021-06/iStock-1221852877.jpg",
+        },
+        {
+          title: "Arts & Culture",
+          desc: "Celebrating creativity and expression within our community.",
+          details:
+            "We host film screenings, gallery nights, drag performances, and pride festivals that highlight queer art and storytelling from diverse voices.",
+          image:
+            "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2025-08/250812-queer-art-censorship-se-143p-0f7861.jpg",
+        },
+        {
+          title: "Support Services",
+          desc: "Here for you — no matter where you are on your journey.",
+          details:
+            "Our trained staff and volunteers offer peer support, coming-out resources, legal guidance, and safe connections for individuals and families in need.",
+          image:
+            "https://m.media-amazon.com/images/I/61fAp0SH+qL._UF1000,1000_QL80_.jpg",
+        },
+        {
+          title: "Volunteer & Outreach",
+          desc: "Join our mission to make a difference locally and beyond.",
+          details:
+            "Whether helping with events, mentorship, or advocacy, our volunteers are the heartbeat of the New Haven Pride Center — making every day a little brighter for all.",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIL-vhEVIFazkfJP97ZK7sT104xnLrmKVgJFo-SQPytI214UpryLt9PfJvhZC5EGRNTLU&usqp=CAU",
+        },
+      ];
 
-
+  // 🌈 Reusable Contact Button
   const ContactButton = () => (
     <div className="flex justify-center my-10">
       <Link to={contactPath}>
         <button
-          className={`px-12 py-2 text-black  rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${theme.accentTextGrad}  font-bold border-4 border-white text-2xl border-amber-300/40 hover:border-amber-300`}
+          className={`px-10 py-2 rounded-full font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 ${theme.accentTextGrad} border-4 border-pink-300/40 hover:border-pink-300`}
         >
-          Contact Us
+          Get Involved 💜
         </button>
       </Link>
     </div>
@@ -91,19 +90,21 @@ const defaultServices = services.length
       <div className="max-w-6xl mx-auto px-6 pt-12">
         <div className="text-center">
           <h1
-            className={`text-3xl border-b-4  sm:text-4xl md:text-5xl font-extrabold ${theme.headingText}`}
+            className={`text-3xl sm:text-4xl md:text-5xl font-extrabold border-b-4 border-pink-400 inline-block ${theme.headingText}`}
           >
-            Services
+            Our Programs & Services
           </h1>
-          <p className="mt-3 text-white/80 max-w-2xl mx-auto">
-            Explore what we offer. Click a service card to learn more.
+          <p className="mt-4 text-white/90 max-w-2xl mx-auto text-lg">
+            Explore how we empower and support the LGBTQIA+ community through
+            connection, advocacy, and creativity.
           </p>
         </div>
       </div>
-        <ContactButton />
+
+      <ContactButton />
 
       {/* Services Grid */}
-      <div className="max-w-6xl mx-auto px-6 mt-12">
+      <div className="max-w-6xl mx-auto px-6 mt-10">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {defaultServices.map((s, i) => (
             <button
@@ -115,7 +116,7 @@ const defaultServices = services.length
                 <img
                   src={s.image}
                   alt={s.title}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-44 object-cover"
                 />
               )}
               <div className="p-5">
@@ -129,83 +130,77 @@ const defaultServices = services.length
             </button>
           ))}
         </section>
-
       </div>
 
       {/* Modal */}
-   {selectedService && (
-  <div
-    className="fixed inset-0 z-50"
-    aria-modal="true"
-    role="dialog"
-  >
-    {/* Backdrop */}
-    <div
-      onClick={() => setSelectedService(null)}
-      className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-    />
-
-    {/* Panel */}
-    <div className="relative z-10 flex min-h-full items-center justify-center p-4">
-      <div className="w-full max-w-2xl overflow-hidden rounded-3xl shadow-2xl border border-white/10 bg-white/90 backdrop-blur-md animate-[fadeInUp_.25s_ease]">
-        {/* Header */}
-        <div className="relative">
-          {selectedService.image && (
-            <img
-              src={selectedService.image}
-              alt={selectedService.title}
-              className="h-56 w-full object-cover"
-            />
-          )}
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
-          <button
+      {selectedService && (
+        <div className="fixed inset-0 z-50" aria-modal="true" role="dialog">
+          {/* Backdrop */}
+          <div
             onClick={() => setSelectedService(null)}
-            className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow hover:bg-white transition"
-            aria-label="Close"
-            title="Close"
-          >
-            ✕
-          </button>
-        </div>
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+          />
 
-        {/* Body */}
-        <div className="p-6">
-          <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
-            {selectedService.title}
-          </h3>
-          <div className="mt-3 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            {selectedService.details}
-          </p>
-        </div>
+          {/* Modal Panel */}
+          <div className="relative z-10 flex min-h-full items-center justify-center p-4">
+            <div className="w-full max-w-2xl overflow-hidden rounded-3xl shadow-2xl border border-white/10 bg-white/90 backdrop-blur-md animate-[fadeInUp_.3s_ease]">
+              {/* Header */}
+              <div className="relative">
+                {selectedService.image && (
+                  <img
+                    src={selectedService.image}
+                    alt={selectedService.title}
+                    className="h-56 w-full object-cover"
+                  />
+                )}
+                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow hover:bg-white transition"
+                  aria-label="Close"
+                  title="Close"
+                >
+                  ✕
+                </button>
+              </div>
 
-        {/* Footer */}
-        <div className="sticky bottom-0 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-between border-t bg-white/80 px-6 py-4 backdrop-blur">
-          <div className="w-full sm:w-auto">
-            <ContactButton />
+              {/* Body */}
+              <div className="p-6">
+                <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
+                  {selectedService.title}
+                </h3>
+                <div className="mt-3 h-px bg-gradient-to-r from-transparent via-pink-400/30 to-transparent" />
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                  {selectedService.details}
+                </p>
+              </div>
+
+              {/* Footer */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-between border-t bg-white/80 px-6 py-4 backdrop-blur">
+                <div className="w-full sm:w-auto">
+                  <ContactButton />
+                </div>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="w-full sm:w-auto rounded-xl bg-gray-900 px-5 py-2.5 font-semibold text-white shadow hover:bg-gray-800 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
-          <button
-            onClick={() => setSelectedService(null)}
-            className="w-full sm:w-auto rounded-xl bg-gray-900 px-5 py-2.5 font-semibold text-white shadow hover:bg-gray-800 transition"
-          >
-            Close
-          </button>
+
+          {/* Keyframes */}
+          <style>
+            {`
+              @keyframes fadeInUp {
+                from { opacity: 0; transform: translate3d(0, 15px, 0); }
+                to   { opacity: 1; transform: translate3d(0, 0, 0); }
+              }
+            `}
+          </style>
         </div>
-      </div>
-    </div>
-
-    {/* Keyframes */}
-    <style>
-      {`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translate3d(0, 10px, 0); }
-          to   { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-      `}
-    </style>
-  </div>
-)}
-
+      )}
     </div>
   );
 }
