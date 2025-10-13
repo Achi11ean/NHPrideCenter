@@ -145,7 +145,7 @@ export default function HomePage() {
         <li><Link to="/services" className="hover:text-pink-400">Services</Link></li>
         <li><Link to="/events" className="hover:text-pink-400">Events</Link></li>
         <li><Link to="/volunteer" className="hover:text-pink-400">Volunteer</Link></li>
-        <li><Link to="/resources" className="hover:text-pink-400">Resources</Link></li>
+        <li><Link to="/resources" className="hover:text-pink-400">Services</Link></li>
         <li><Link to="/contact" className="hover:text-pink-400">Contact</Link></li>
         <li><Link to="/donate" className="hover:text-pink-400">Donate</Link></li>
         <li><Link to="/privacy" className="hover:text-pink-400">Privacy Policy</Link></li>

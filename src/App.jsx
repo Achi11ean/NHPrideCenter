@@ -9,6 +9,8 @@ import ContactPageTemplate from "./Contact";
 import Privacy from "./Privacy";
 import Volunteer from "./Volunteer";
 import Donate from "./Donate";
+import Events from "./Events";
+
 function App() {
   return (
     <Router>
@@ -23,6 +25,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </Router>
   );
