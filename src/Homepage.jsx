@@ -40,7 +40,7 @@ export default function HomePage() {
 <div className="mt-28 sm:mt-20 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 px-4 text-center">
   <Link
     to="/about"
-    className="text-white w-full text-center border-2 border-white px-1 py-2 rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105"
+    className="text-white w-full text-center border-2 border-white px-1 py-2 rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105 hover:text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     style={{
       background: "linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8)",
       backgroundSize: "200% 200%",
@@ -54,7 +54,7 @@ export default function HomePage() {
 
   <Link
     to="/contact"
-    className="text-white w-full text-center px-1 py-2 border-2 border-white rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105"
+    className="text-white w-full text-center px-1 py-2 border-2 border-white rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105 hover:text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     style={{
       background: "linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8)",
       backgroundSize: "200% 200%",
@@ -68,7 +68,7 @@ export default function HomePage() {
 
   <Link
     to="/services"
-    className="text-white w-full text-center px-1 border-2 border-white py-2 rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105"
+    className="text-white w-full text-center px-1 border-2 border-white py-2 rounded-full text-base sm:text-lg font-semibold shadow-md transition-all duration-500 transform hover:scale-105 hover:text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     style={{
       background: "linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8)",
       backgroundSize: "200% 200%",
@@ -80,6 +80,7 @@ export default function HomePage() {
     Services
   </Link>
 </div>
+
 
 
         {/* Info / Bio Section */}
@@ -141,7 +142,7 @@ export default function HomePage() {
       <h4 className="text-lg font-semibold text-white mb-3">Quick Links</h4>
       <ul className="grid grid-cols-2 gap-2 text-sm">
         <li><Link to="/about" className="hover:text-pink-400">About</Link></li>
-        <li><Link to="/services" className="hover:text-pink-400">Programs</Link></li>
+        <li><Link to="/services" className="hover:text-pink-400">Services</Link></li>
         <li><Link to="/events" className="hover:text-pink-400">Events</Link></li>
         <li><Link to="/volunteer" className="hover:text-pink-400">Volunteer</Link></li>
         <li><Link to="/resources" className="hover:text-pink-400">Resources</Link></li>

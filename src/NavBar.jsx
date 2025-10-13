@@ -18,40 +18,41 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="backdrop-blur-md bg-blue-900/80 shadow-lg w-full sticky top-0 z-50 border-b border-blue-700">
-        <div className="container mx-auto flex justify-between items-center px-6 relative">
+      <nav className="backdrop-blur-md bg-yellow-100 py-1 shadow-lg w-full sticky top-0 z-50 border-b border-blue-700">
+        <div className="container mx-auto flex justify-between items-center px-1 relative">
           {/* Logo */}
           <Link
             to="/"
             className="transition duration-500 ease-in-out transform hover:scale-110"
           >
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZlaUXIWozu3xqknYB3S9nknCPGFPAEVZLA&s"
+              src="./PrideLogo2.jpeg"
               alt="Company Logo"
-              className="h-20 sm:h-24 md:h-28 object-contain transition-transform duration-300"
+              className="h-16 sm:h-24 md:h-24 border border-black object-contain transition-transform duration-300"
             />
           </Link>
 
           {/* Mobile Menu Button */}
-          <div
-            className="md:hidden cursor-pointer text-white z-50"
-            onClick={toggleMenu}
-          >
-            {menuOpen ? <X size={32} /> : <Menu size={32} />}
-          </div>
+ <div
+  className="md:hidden flex items-center gap-2 cursor-pointer text-black font-semibold text-lg z-50"
+  onClick={toggleMenu}
+>
+  {menuOpen ? <X size={28} /> : <Menu size={28} />}
+  <span>{menuOpen ? "Close" : "Menu"}</span>
+</div>
 
           {/* Navigation Links */}
           <div
             className={`${
               menuOpen ? "flex" : "hidden"
-            } flex-col md:flex md:flex-row md:space-x-12 w-full md:w-auto absolute md:static top-16 left-0 right-0 bg-blue-900 md:bg-transparent rounded-b-2xl shadow-lg md:shadow-none transition-all duration-500 ease-in-out p-6 md:p-0 z-40`}
+            } flex-col md:flex md:flex-row md:space-x-12 w-full md:w-auto absolute md:static top-16 left-0 right-0 bg-yellow-100 md:bg-transparent  shadow-lg md:shadow-none transition-all duration-500 ease-in-out p-2 md:p-0 z-40`}
           >
-            <div className="flex flex-col md:flex-row md:space-x-12 text-center space-y-6 md:space-y-0">
+            <div className="flex flex-col md:flex-row md:space-x-12 text-center space-y-4 md:space-y-0">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-white hover:text-yellow-400 text-lg font-semibold uppercase tracking-wide transition duration-300 border-b-2 border-transparent hover:border-yellow-400"
+                  className="text-black hover:text-blue-600 text-lg font-semibold uppercase tracking-wide transition duration-300 border-b-2 border-transparent hover:border-yellow-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}
@@ -65,7 +66,7 @@ const NavBar = () => {
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-400 hover:text-white text-2xl transition duration-300 transform hover:scale-110"
+                className="text-blue-400 hover:text-white text-2xl transition duration-300 transform hover:scale-110"
               >
                 <FaFacebook />
               </a>
@@ -73,7 +74,7 @@ const NavBar = () => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-400 hover:text-white text-2xl transition duration-300 transform hover:scale-110"
+                className="text-pink-400 hover:text-white text-2xl transition duration-300 transform hover:scale-110"
               >
                 <FaInstagram />
               </a>
