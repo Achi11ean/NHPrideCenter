@@ -58,7 +58,7 @@ export default function About() {
         </nav>
 <div className="text-center py-3 ">
           <Link
-            to="/contact"
+            to="/dontate"
             className="inline-block w-full py-1 text-lg font-semibold text-white  border border-white  shadow-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105 transition-transform"
           >
             Donate 🌈
