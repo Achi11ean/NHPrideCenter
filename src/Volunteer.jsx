@@ -48,7 +48,7 @@ export default function Volunteer() {
         <p className="text-lg text-gray-200 leading-relaxed">
           Volunteers are the heartbeat of the{" "}
           <span className="font-semibold text-pink-400">
-            New Haven Pride Center
+            Hartford Pride Center
           </span>. From event coordination to community outreach, mentorship,
           and creative programming — your energy and compassion help us grow,
           empower, and uplift the LGBTQIA+ community across Connecticut.
@@ -176,10 +176,10 @@ export default function Volunteer() {
       {/* Footer CTA */}
       <div className="text-center pb-16">
         <p className="text-lg text-gray-300 mb-4">
-          Ready to get started? Let’s make New Haven shine together. 🌟
+          Ready to get started? Let’s make Hartford shine together. 🌟
         </p>
         <a
-          href="mailto:volunteer@newhavenpridecenter.org"
+          href="mailto:volunteer@Hartfordpridecenter.org"
           className="inline-block px-10 py-3 rounded-full bg-gradient-to-r from-teal-400 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg hover:scale-105 transition"
         >
           Email Our Team

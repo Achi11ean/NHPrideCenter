@@ -81,7 +81,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.15 }}
         >
-          The <span className="text-pink-300 font-semibold">New Haven Pride Center</span> is dedicated to uplifting
+          The <span className="text-pink-300 font-semibold">Hartford Pride Center</span> is dedicated to uplifting
           and connecting the LGBTQIA+ community through advocacy, art, education, and celebration.  
           We provide inclusive programming, support services, and cultural events that amplify queer voices and promote equality.
         </motion.p>
@@ -92,7 +92,7 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-3 text-center text-pink-600">Our Mission</h2>
             <p className="text-base md:text-lg leading-7">
               To create a welcoming and affirming space for all members of the LGBTQIA+ community by fostering connection, promoting self-expression,
-              and providing essential resources that empower individuals and strengthen our collective voice in Greater New Haven.
+              and providing essential resources that empower individuals and strengthen our collective voice in Greater Hartford.
             </p>
           </article>
 

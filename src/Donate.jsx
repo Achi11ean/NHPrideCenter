@@ -61,7 +61,7 @@ export default function Donate() {
         <p className="text-lg text-gray-200 leading-relaxed">
           Every dollar you give helps the{" "}
           <span className="font-semibold text-pink-400">
-            New Haven Pride Center
+            Hartford Pride Center
           </span>{" "}
           continue providing critical programs, safe spaces, and resources for
           the LGBTQIA+ community in Connecticut. Together, we create lasting
@@ -184,7 +184,7 @@ export default function Donate() {
           Prefer to give another way? You can also donate via Venmo or check.
         </p>
         <a
-          href="https://newhavenpridecenter.org/donate"
+          href="https://Hartfordpridecenter.org/donate"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-3 rounded-full bg-gradient-to-r from-teal-400 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg hover:scale-105 transition"

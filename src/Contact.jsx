@@ -60,10 +60,10 @@ export default function ContactPageTemplate() {
             <FaEnvelope size={36} className="mx-auto text-pink-600 mb-4" />
             <p className="text-lg font-bold text-gray-800">Email Us</p>
             <a
-              href="mailto:info@newhavenpridecenter.org"
+              href="mailto:info@Hartfordpridecenter.org"
               className="text-pink-600 font-medium hover:underline"
             >
-              info@newhavenpridecenter.org
+              info@Hartfordpridecenter.org
             </a>
           </div>
 
@@ -82,7 +82,7 @@ export default function ContactPageTemplate() {
             <FaMapMarkerAlt size={36} className="mx-auto text-purple-600 mb-4" />
             <p className="text-lg font-bold text-gray-800">Visit Us</p>
             <p className="text-purple-600 font-medium">
-              84 Orange Street • New Haven, CT
+              84 Orange Street • Hartford, CT
             </p>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function ContactPageTemplate() {
                 className="mb-4 text-sm text-pink-100 bg-purple-900/60 p-3 "
               >
                 <p>
-                  By submitting this form, you consent to the New Haven Pride Center
+                  By submitting this form, you consent to the Hartford Pride Center
                   contacting you using the information provided. Please do not
                   include sensitive or confidential data.
                 </p>
