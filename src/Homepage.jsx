@@ -8,7 +8,7 @@ import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 export default function HomePage() {
   return (
 <div
-  className="relative text-center min-h-screen pb- animate-rainbow-wave"
+  className="relative text-center min-h-screen  animate-rainbow-wave"
   style={{
     background:
       "radial-gradient(circle at 30% 30%, #ff6ec4, transparent 25%), radial-gradient(circle at 70% 40%, #7873f5, transparent 25%), radial-gradient(circle at 50% 70%, #42e695, transparent 25%), linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #84fab0, #8fd3f4, #fccb90)",
@@ -20,7 +20,7 @@ export default function HomePage() {
 
       {/* Photo Slider Section */}
       <div className="relative">
-         <div className=" bg-gray-100 py-6 text-center">
+         <div className=" bg-gray-100 sm:py-6 text-center">
   <img
     src="/PrideLogo2.jpeg"
     alt="Hartford Pride Center Logo"
