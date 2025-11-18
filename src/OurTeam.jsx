@@ -80,8 +80,8 @@ export default function OurTeamBlueTemplate() {
       >
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
           <div className="flex items-center gap-3 rounded-full border-2 border-blue-300/80 bg-blue-800/60 backdrop-blur px-6 py-3 shadow-xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              {activeTab === "team" ? "Our Team" : "Our Sponsors"}
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+              {activeTab === "team" ? "Our Team" : "Sponsors"}
             </h1>
           </div>
         </div>

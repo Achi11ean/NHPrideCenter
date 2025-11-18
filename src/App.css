@@ -62,3 +62,48 @@
 .animate-rainbow-wave {
   animation: rainbow-wave 16s ease-in-out infinite;
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeLeft 0.8s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #22c55e, 0 0 20px #14b8a6, 0 0 30px #84cc16;
+  }
+  50% {
+    box-shadow: 0 0 15px #22c55e, 0 0 25px #14b8a6, 0 0 35px #84cc16;
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 1.5s infinite ease-in-out;
+}

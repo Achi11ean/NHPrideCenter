@@ -10,7 +10,7 @@ import Privacy from "./Privacy";
 import Volunteer from "./Volunteer";
 import Donate from "./Donate";
 import Events from "./Events";
-
+import AdminSubmissionsPage from "./AdminSubmissionsPage";
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/admin-submissions" element={<AdminSubmissionsPage />} />
       </Routes>
     </Router>
   );

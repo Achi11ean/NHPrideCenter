@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import SponsorInvitationPage from "./SponsorInvitationPage";
 // —— SAMPLE SPONSOR DATA ——
 const sponsors = [
   {
@@ -56,20 +56,76 @@ const sponsors = [
 // —— Component ——
 export default function OurSponsorsBlueTemplate() {
   const [selectedSponsor, setSelectedSponsor] = useState(null);
+const [showInvitation, setShowInvitation] = useState(false);
 
   return (
     <div className="min-h-screen bg-blue-900 text-blue-50">
       {/* Hero */}
-  
+ 
+
+{/* ⭐ SPONSOR INVITATION MODAL */}
+<AnimatePresence>
+  {showInvitation && (
+    <motion.div
+      key="invitationModal"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center"
+      onClick={() => setShowInvitation(false)}
+    >
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 40, opacity: 0 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto
+                   rounded-3xl bg-blue-900 shadow-2xl border border-yellow-300"
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setShowInvitation(false)}
+          className="absolute top-4 right-4 text-yellow-200 hover:text-white 
+                     text-3xl font-bold"
+        >
+          ×
+        </button>
+
+        {/* Render your sponsor invitation page inside */}
+        <div className="p-1 sm:p-4">
+          <SponsorInvitationPage />
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
       {/* Sponsor grid */}
       <section className="max-w-6xl mx-auto px-4  pb-20">
-        <p className="text-black font-bold text-xl bg-yellow-600 text-center max-w-3xl mx-auto mb-2 border-b-2 leading-relaxed">
-          We proudly honor the partners who keep our mission strong. Customize this list
-          with logos, tiers, and descriptions.
-        </p>
+  <p
+  className="
+    max-w-4xl mx-auto mb-6  px-2 
+    text-center text-2xl font-extrabold tracking-wide
+    bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500
+    text-black shadow-[0_4px_12px_rgba(0,0,0,0.25)]
+    border-b-4 border-black
+    rounded-none
+  "
+>
+  We proudly honor and offer benefits/perks to thank the partners who support our mission and give back to the community.
+</p>
+     <div className="text-center">
+  <button
+    onClick={() => setShowInvitation(true)}
+    className="inline-flex items-center gap-2 py-2 rounded-none border-2 border-yellow-300 
+               bg-blue-800/60 px-4 text-black font-mono neon-pulse font-bold  bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-700  hover:bg-blue-700/70 
+               hover:shadow-lg transition"
+  >
+     <span className="bg-white/40 px-4  ">Become a Sponsor!</span> 
+  </button>
+</div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 mt-4 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sponsors.map((s, i) => (
             <motion.button
               key={s.name}

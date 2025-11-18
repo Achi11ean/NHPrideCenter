@@ -8,6 +8,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
+  // ⭐ Added Admin Submissions Page
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -15,6 +16,9 @@ const NavBar = () => {
     { name: "Events", path: "/events" },
     { name: "Our Team", path: "/ourteam" },
     { name: "Contact", path: "/contact" },
+
+    // ⭐ NEW ROUTE
+    { name: "Admin", path: "/admin-submissions" },
   ];
 
   return (
@@ -39,15 +43,13 @@ const NavBar = () => {
             />
           </div>
 
-          <style>
-            {`
-              @keyframes borderFlow {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-              }
-            `}
-          </style>
+          <style>{`
+            @keyframes borderFlow {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+          `}</style>
         </Link>
 
         {/* 🍔 Mobile Menu Button */}
@@ -76,57 +78,69 @@ const NavBar = () => {
       </div>
 
       {/* 📱 Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden mx-4 mt-3 mb-4 rounded bg-black/70 backdrop-blur-md p-6 shadow-lg border border-white/10">
+     {menuOpen && (
+  <div className="md:hidden mx-4 mt-3 mb-4 rounded bg-black/70 backdrop-blur-md p-6 shadow-lg border border-white/10">
 
-          <ul className="grid grid-cols-2 gap-3 text-lg font-semibold text-center text-white">
+    <ul className="grid grid-cols-2 gap-3 text-lg font-semibold text-center text-white">
 
-            {navItems.map((item, i) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  onClick={toggleMenu}
-                  className={`
-                    block w-full py-2 rounded border-2 border-white 
-                    transition-all shadow-md hover:shadow-xl
-                    ${[
-                      "bg-gradient-to-r from-pink-600 to-red-600",
-                      "bg-gradient-to-r from-orange-500 to-red-500",
-                      "bg-gradient-to-r from-yellow-400 to-orange-400 text-black",
-                      "bg-gradient-to-r from-green-500 to-emerald-600",
-                      "bg-gradient-to-r from-blue-500 to-indigo-600",
-                      "bg-gradient-to-r from-purple-500 to-fuchsia-600",
-                    ][i % 6]}
-                  `}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+      {navItems.map((item, i) => {
+        const isAdmin = item.name === "Admin";
 
-            {/* ⭐ Social Buttons Full Width Row */}
-            <li className="col-span-2 flex justify-center gap-6 pt-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 text-4xl transition transform hover:scale-125"
-              >
-                <FaFacebook />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-400 hover:text-pink-300 text-4xl transition transform hover:scale-125"
-              >
-                <FaInstagram />
-              </a>
-            </li>
+        return (
+          <li
+            key={item.name}
+            className={isAdmin ? "col-span-2" : ""}
+          >
+            <Link
+              to={item.path}
+              onClick={toggleMenu}
+              className={`
+                block w-full py-2 rounded border-2 border-white 
+                transition-all shadow-md hover:shadow-xl
+                ${
+                  isAdmin
+                    ? "bg-gradient-to-r from-yellow-300 to-yellow-500 text-black"  // ⭐ Full-width admin style
+                    : [
+                        "bg-gradient-to-r from-pink-600 to-red-600",
+                        "bg-gradient-to-r from-orange-500 to-red-500",
+                        "bg-gradient-to-r from-yellow-400 to-orange-400 text-black",
+                        "bg-gradient-to-r from-green-500 to-emerald-600",
+                        "bg-gradient-to-r from-blue-500 to-indigo-600",
+                        "bg-gradient-to-r from-purple-500 to-fuchsia-600",
+                      ][i % 6]
+                }
+              `}
+            >
+              {item.name}
+            </Link>
+          </li>
+        );
+      })}
 
-          </ul>
-        </div>
-      )}
+      {/* ⭐ Social Icons Full Row */}
+      <li className="col-span-2 flex justify-center gap-6 pt-3">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 text-4xl transition transform hover:scale-125"
+        >
+          <FaFacebook />
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-400 hover:text-pink-300 text-4xl transition transform hover:scale-125"
+        >
+          <FaInstagram />
+        </a>
+      </li>
+
+    </ul>
+  </div>
+)}
+
     </nav>
   );
 };

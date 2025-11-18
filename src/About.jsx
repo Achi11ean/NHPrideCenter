@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen pb-10 bg-gradient-to-br from-teal-800 via-indigo-900 to-purple-900 text-gray-100">
+    <div className="min-h-screen mt-24 sm:mt-36 pb-10 bg-gradient-to-br from-teal-800 via-indigo-900 to-purple-900 text-gray-100">
       {/* Banner */}
       <section className="relative w-full">
         <div
-          className="h-[42vh] md:h-[56vh] bg-cover bg-center"
+          className="h-[42vh] md:h-[42vh]  bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://westhartfordpride.org/wp-content/uploads/2022/01/West-Hartford-Pride-2022.jpg')",
-            backgroundPosition: "center 55%",
+            backgroundPosition: "center 25%",
           }}
           aria-label="Community celebration banner"
         />
