@@ -3,6 +3,8 @@ import { GiAcorn } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import OurSponsorsBlueTemplate from "./OurSponsors";
+import { useLocation } from "react-router-dom";
+
 // —— Fake, reusable sample data (non‑medical / general business) ——
 const teamMembers = [
   {
@@ -62,8 +64,12 @@ const teamMembers = [
 ];
 
 // —— Component ——
+  
 export default function OurTeamBlueTemplate() {
-  const [activeTab, setActiveTab] = useState("team"); // ⭐ NEW
+  const location = useLocation();
+  const openSponsors = location.state?.openSponsors === true;
+
+  const [activeTab, setActiveTab] = useState(openSponsors ? "sponsors" : "team");
   const [selectedMember, setSelectedMember] = useState(null);
 
   return (

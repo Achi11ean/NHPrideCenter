@@ -57,12 +57,14 @@ export default function About() {
           </div>
         </nav>
 <div className="text-center py-3 ">
-          <Link
-            to="/dontate"
-            className="inline-block w-full py-1 text-lg font-semibold text-white  border border-white  shadow-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105 transition-transform"
-          >
-            Donate 🌈
-          </Link>
+<Link
+  to="/OurTeam"
+  state={{ openSponsors: true }}
+  className="inline-block w-full py-1 text-lg font-semibold text-white  border border-white  shadow-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105 transition-transform"
+>
+  Sponsor / Donate 🌈
+</Link>
+
         </div>
         {/* Headline */}
         <motion.p
@@ -73,20 +75,6 @@ export default function About() {
         >
           Building a future where every voice is heard, every identity celebrated, and every person empowered.
         </motion.p>
-
-        {/* Intro */}
-        <motion.p
-          className="mt-2 text-center text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.15 }}
-        >
-          The <span className="text-pink-300 font-semibold">Hartford Pride Center</span> is dedicated to uplifting
-          and connecting the LGBTQIA+ community through advocacy, art, education, and celebration.  
-          We provide inclusive programming, support services, and cultural events that amplify queer voices and promote equality.
-        </motion.p>
-
-        {/* Info Grid */}
         <section className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           <article className="bg-white/90 text-gray-800 p-6 md:p-8 shadow-xl rounded-xl border-l-4 border-pink-500">
             <h2 className="text-3xl font-bold mb-3 text-center text-pink-600">Our Mission</h2>
@@ -105,6 +93,20 @@ export default function About() {
             </p>
           </article>
         </section>
+
+        {/* Intro */}
+        <motion.p
+          className="mt-2 text-center text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 0.15 }}
+        >
+          The <span className="text-pink-300 font-semibold">Hartford Pride Center</span> is dedicated to uplifting
+          and connecting the LGBTQIA+ community through advocacy, art, education, and celebration.  
+          We provide inclusive programming, support services, and cultural events that amplify queer voices and promote equality.
+        </motion.p>
+
+        {/* Info Grid */}
 
         {/* Closing CTA */}
         
