@@ -1,0 +1,180 @@
+// OurSponsorsBlueTemplate.jsx
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
+// —— SAMPLE SPONSOR DATA ——
+const sponsors = [
+  {
+    name: "Sunrise Coffee Roasters",
+    tier: "Gold Sponsor",
+    logo: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800",
+    description: `Local coffeehouse supporting inclusive community programs.\n\nThey believe in warm spaces, warm drinks, and warm hearts.`,
+    style: "border-yellow-300 bg-yellow-50 hover:shadow-yellow-300/50",
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=2400')",
+  },
+  {
+    name: "Unity Financial Group",
+    tier: "Silver Sponsor",
+    logo: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=800",
+    description: `A financial firm committed to equity, access, and supporting LGBTQIA+ empowerment.\n\nProud community partner.`,
+    style: "border-yellow-300 bg-yellow-50 hover:shadow-yellow-300/50",
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2400')",
+  },
+{
+  name: "BrightPath Wellness",
+  tier: "Community Sponsor",
+  logo: "https://media.istockphoto.com/id/1481370371/photo/portrait-of-enthusiastic-hispanic-young-woman-working-on-computer-in-a-modern-bright-office.jpg?s=612x612&w=0&k=20&c=8kNce9Ruc9F2KXvnwf0stWQXCwwQTBCrW8efrqhUIa4=",
+  description: `Holistic wellness services with a mission of healing, belonging, and mental health equity.`,
+  style: "border-yellow-300 bg-yellow-50 hover:shadow-yellow-300/50",
+  backgroundImage:
+    "url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?q=80&w=2400')",
+},
+{
+  name: "Evergreen Market",
+  tier: "Bronze Sponsor",
+  logo: "https://images.immediate.co.uk/production/volatile/sites/10/2023/06/2048x1365-Oak-trees-SEO-GettyImages-90590330-b6bfe8b.jpg",
+  description: `Neighborhood grocery chain supporting LGBTQ youth initiatives and local arts.`,
+  style: "border-yellow-300 bg-yellow-50 hover:shadow-yellow-300/50",
+  backgroundImage:
+    "url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=2400')",
+},
+
+  {
+    name: "Glow Fitness Studio",
+    tier: "Gold Sponsor",
+    logo: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=800",
+    description: `Fitness for everybody and every body.\n\nTheir mission: Move, shine, and belong.`,
+    style: "border-yellow-300 bg-yellow-50 hover:shadow-yellow-300/50",
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1437915015400-137312b61975?q=80&w=2400')",
+  },
+];
+
+// —— Component ——
+export default function OurSponsorsBlueTemplate() {
+  const [selectedSponsor, setSelectedSponsor] = useState(null);
+
+  return (
+    <div className="min-h-screen bg-blue-900 text-blue-50">
+      {/* Hero */}
+  
+
+      {/* Sponsor grid */}
+      <section className="max-w-6xl mx-auto px-4  pb-20">
+        <p className="text-black font-bold text-xl bg-yellow-600 text-center max-w-3xl mx-auto mb-2 border-b-2 leading-relaxed">
+          We proudly honor the partners who keep our mission strong. Customize this list
+          with logos, tiers, and descriptions.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sponsors.map((s, i) => (
+            <motion.button
+              key={s.name}
+              onClick={() => setSelectedSponsor(s)}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.99 }}
+              className={`text-left cursor-pointer rounded-3xl p-6 shadow-lg border-2 transition-all duration-300 ${s.style}`}
+            >
+              <img
+                src={s.logo}
+                alt={s.name}
+                className="w-24 h-24 rounded-2xl object-cover shadow-md"
+              />
+              <div className="mt-4">
+                <h3 className="text-xl font-bold text-blue-900">
+                  {s.name}
+                </h3>
+                <p className="text-sm font-medium text-blue-700/80">
+                  {s.tier}
+                </p>
+              </div>
+              <p className="mt-4 text-blue-900/80 bg-white/70 rounded-xl p-3 max-h-40 overflow-y-auto whitespace-pre-line">
+                {s.description}
+              </p>
+            </motion.button>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-yellow-300 bg-blue-800/60 px-6 py-3 font-semibold hover:bg-blue-700/70 hover:shadow-lg transition"
+          >
+            Become a Sponsor
+          </Link>
+        </div>
+      </section>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedSponsor && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4"
+            onClick={() => setSelectedSponsor(null)}
+          >
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 40, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-yellow-200"
+              style={{
+                backgroundImage: selectedSponsor.backgroundImage,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/85 via-blue-900/75 to-blue-900/90" />
+              <div className="relative p-6 sm:p-10 text-blue-50">
+                <div className="flex flex-col sm:flex-row items-center gap-5">
+                  <img
+                    src={selectedSponsor.logo}
+                    alt={selectedSponsor.name}
+                    className="w-28 h-28 rounded-2xl object-cover border-4 border-white/80 shadow-lg"
+                  />
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold">
+                      {selectedSponsor.name}
+                    </h3>
+                    <p className="text-yellow-200 font-medium">
+                      {selectedSponsor.tier}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 max-h-64 overflow-y-auto rounded-2xl bg-white/90 p-4 text-blue-900 leading-7 whitespace-pre-line">
+                  {selectedSponsor.description}
+                </div>
+
+                <div className="mt-6 flex justify-end gap-3">
+                  <button
+                    onClick={() => setSelectedSponsor(null)}
+                    className="rounded-xl px-5 py-2.5 font-semibold bg-white text-blue-900 border border-yellow-200 hover:bg-blue-50"
+                  >
+                    Close
+                  </button>
+                  <Link
+                    to="/contact"
+                    className="rounded-xl px-5 py-2.5 font-semibold bg-yellow-200/90 text-blue-900 hover:bg-yellow-200"
+                  >
+                    Partner With Us
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <footer className="text-center text-blue-200/80 pb-10">
+        <p className="font-semibold tracking-wide">Supporting our mission. Empowering our community.</p>
+      </footer>
+    </div>
+  );
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaRainbow } from "react-icons/fa";
-
+import CapitalEvents from "./CapitalEvents";
 export default function Events() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-teal-900 text-white flex flex-col items-center justify-center px-6 text-center">
@@ -17,31 +17,9 @@ export default function Events() {
           Upcoming Events
         </h1>
       </motion.div>
-
+<CapitalEvents />
       {/* Message Section */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="max-w-2xl bg-white/10 border border-pink-400 rounded-2xl shadow-2xl p-8 backdrop-blur-sm"
-      >
-        <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-4">
-          🌈 We’re currently preparing for our next round of community events,
-          performances, and celebrations!
-        </p>
-        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-          In the meantime, check out{" "}
-          <a
-            href="https://karaoverse.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-300 font-semibold underline hover:text-pink-200 transition"
-          >
-            Karaoverse.com
-          </a>{" "}
-          for live karaoke, drag, and trivia events happening near you!
-        </p>
-      </motion.div>
+      
 
       {/* Footer Sparkle / Decoration */}
       <motion.div
