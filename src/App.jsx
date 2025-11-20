@@ -10,6 +10,7 @@ import Privacy from "./Privacy";
 import Volunteer from "./Volunteer";
 import Donate from "./Donate";
 import Events from "./Events";
+import HartfordCityPride from "./CapitalCityPride";
 import AdminSubmissionsPage from "./AdminSubmissionsPage";
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/events" element={<Events />} />
         <Route path="/admin-submissions" element={<AdminSubmissionsPage />} />
+        <Route path="/hartford-city-pride" element={<HartfordCityPride />} />
       </Routes>
     </Router>
   );

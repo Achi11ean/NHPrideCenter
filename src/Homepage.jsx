@@ -149,7 +149,10 @@ export default function HomePage() {
         <li><Link to="/resources" className="hover:text-pink-400">Services</Link></li>
         <li><Link to="/contact" className="hover:text-pink-400">Contact</Link></li>
         <li><Link to="/donate" className="hover:text-pink-400">Donate</Link></li>
+                <li><Link to="/hartford-city-pride" className="hover:text-pink-400">Hartford City Pride</Link></li>
+
         <li><Link to="/privacy" className="hover:text-pink-400">Privacy Policy</Link></li>
+
       </ul>
     </div>
 
