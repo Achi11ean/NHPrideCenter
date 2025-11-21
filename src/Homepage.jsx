@@ -120,7 +120,7 @@ export default function HomePage() {
 
         {/* Hartford Pride Event 2026 Info */}
 <Link
-  to="/capital-city-pride"
+  to="/hartford-city-pride"
   className="
     text-white w-full text-center border-2 border-white px-1 py-2 rounded-none
     text-base sm:text-lg font-semibold shadow-md drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]
