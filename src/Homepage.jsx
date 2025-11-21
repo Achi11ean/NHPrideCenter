@@ -112,13 +112,28 @@ export default function HomePage() {
   inspire, and unite our diverse community.
 </p>
 
-<p className="text-gray-700 font-semibold text-lg leading-relaxed">
+<p className="text-gray-700 pb-6 font-semibold text-lg leading-relaxed">
   Together, we’re creating a safer, more inclusive world — one that values authenticity, compassion, and pride.  
   Join us in making Hartford a place where everyone can thrive, be themselves, and shine brightly. 🌈
 </p>
 
 
-        
+        {/* Hartford Pride Event 2026 Info */}
+<Link
+  to="/capital-city-pride"
+  className="
+    text-white w-full text-center border-2 border-white px-1 py-2 rounded-none
+    text-base sm:text-lg font-semibold shadow-md drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]
+    transition-all duration-500 transform hover:scale-105
+    bg-[length:200%_200%]
+    bg-[linear-gradient(90deg,#ec4899,#a855f7,#6366f1)]
+    hover:bg-[right_center]
+    bg-[left_center]
+  "
+>
+  Hartford Pride Event 2026
+</Link>
+
         </div>
      
       </div>
