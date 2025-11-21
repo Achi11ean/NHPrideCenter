@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaRainbow } from "react-icons/fa";
 import CapitalEvents from "./CapitalEvents";
 export default function Events() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-teal-900 text-white flex flex-col items-center justify-center px-6 text-center">
+    <div className="min-h-screen pt-32 bg-gradient-to-br from-indigo-900 via-purple-900 to-teal-900 text-white flex flex-col items-center justify-center px-6 text-center">
       {/* Animated Header */}
       <motion.div
         initial={{ opacity: 0, y: -25 }}
@@ -13,7 +13,7 @@ export default function Events() {
         className="mb-8"
       >
         <FaCalendarAlt className="text-pink-400 text-6xl mx-auto mb-3 drop-shadow-md" />
-        <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-4xl  sm:text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
           Upcoming Events
         </h1>
       </motion.div>
